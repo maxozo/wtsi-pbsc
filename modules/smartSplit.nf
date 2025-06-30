@@ -41,7 +41,8 @@ process acrossSamples_mapped_unmapped_regions_perChr {
 
 
 process suggest_splits_binarySearch {
-  label 'mini_job'
+    label 'mini_job'
+    container "/software/hgi/containers/yascp/yascp.cog.sanger.ac.uk-public-yascp_qc_jan_2025.sif"
 
     input:
       tuple val(chrom), val(sample_ids), path(bams), path(bais), path(unmapped_regions_bed)
